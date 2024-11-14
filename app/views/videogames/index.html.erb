@@ -1,0 +1,11 @@
+<h1>Videogames: </h1>
+
+<ul>
+  <% @videogames.each do |videogame| %>
+    <li>
+      <%= videogame.name %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Pedir Recomendaciones', new_recommendation_path, class: 'btn btn-primary' %>
