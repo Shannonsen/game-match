@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  videogame: one
+  category: one
+
+two:
+  videogame: two
+  category: two
