@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get '/', to: 'videogames#index'
+  resources :videogames, only: :index
   resources :recommendations, only: [:new, :create, :show]
 end

@@ -2,9 +2,7 @@
 
 <ul>
   <% @videogames.each do |videogame| %>
-    <li>
-      <%= videogame.name %>
-    </li>
+    <%= tag.li videogame.name %>
   <% end %>
 </ul>
 
