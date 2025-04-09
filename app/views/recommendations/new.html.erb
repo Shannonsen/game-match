@@ -1,6 +1,11 @@
 <h1>Pedir Recomendaciones</h1>
 
-<%= form_with url: recommendations_path, method: :post, local: true do |form| %>
-  <%= form.text_field :user_query, placeholder: "Escribe tus preferencias (por ejemplo: 'juegos de rol de mundo abierto')", required: true %>
+<%= form_with url: recommendations_path, method: :post, id: "recommendation-form" do |form| %>
+  <%= form.text_field :user_query, placeholder: "Escribe tus preferencias", required: true %>
   <%= form.submit "Pedir Recomendación" %>
+<% end %>
+
+<% if @response.present? %>
+  <h2>Recomendación:</h2>
+  <p><%= @response %></p>
 <% end %>

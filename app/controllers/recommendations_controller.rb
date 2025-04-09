@@ -5,14 +5,10 @@ class RecommendationsController < ApplicationController
     user_query = params[:user_query]
 
     chat_service = OpenaiChatService.new 
-    chat_service.add_message('user',  "Suggest an animation movie based on '#{user_query}'")
-    chat_service.chat
+    chat_service.add_message('user',  "Suggest a videogame considering I've played it before '#{user_query}'")
     
-    @response = "Recomendación basada en '#{user_query}'"  # Este es un ejemplo
-    render :show
+    @response = "Your result was:  '#{chat_service.chat}'"
+    render :new
   end
 
-  def show
-    @response
-  end
 end
