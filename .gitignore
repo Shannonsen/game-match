@@ -65,3 +65,5 @@ build-iPhoneSimulator/
 yarn-debug.log*
 .yarn-integrity
 .env
+/app/assets/builds/*
+!/app/assets/builds/.keep
