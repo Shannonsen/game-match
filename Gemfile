@@ -31,6 +31,8 @@ gem 'will_paginate', '~> 3.3'
 
 gem 'ruby-openai'
 gem 'dotenv-rails', '~> 3.1.0'
+gem 'tailwindcss-rails', '~> 2.0'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

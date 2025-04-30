@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :videogames, only: :index
-  resources :recommendations, only: [:new, :create, :show]
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  
+  resources :videogames
+  resources :recommendations, only: [:new, :create]
+  
+  root "videogames#index"
 end
