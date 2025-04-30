@@ -26,6 +26,21 @@
                 </div>
               </div>
             </div>
+            <div class="hidden md:block">
+              <div class="ml-4 flex items-center md:ml-6">
+                <% if user_signed_in? %>
+                  <div class="relative ml-3">
+                    <div class="flex items-center">
+                      <span class="text-gray-300 mr-4"><%= current_user.email %></span>
+                      <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
+                    </div>
+                  </div>
+                <% else %>
+                  <%= link_to "Iniciar Sesión", new_user_session_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
+                  <%= link_to "Registrarse", new_user_registration_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
